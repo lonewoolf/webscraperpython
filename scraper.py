@@ -27,7 +27,7 @@ for pg in quote_page:
 		if tag.find("span",class_="sr-only"):
 			perfumeIntensity=tag.find("span",class_="sr-only").text
 
-		print perfumeBrand+" "+ perfumeName+ " "+perfumeIntensity
+		#print perfumeBrand+" "+ perfumeName+ " "+perfumeIntensity
 	
 		perfumes_array.append((perfumeBrand.strip(), perfumeName.strip(), perfumeIntensity.strip()))
 
@@ -40,4 +40,4 @@ for pg in quote_page:
 	 for perfumeBrand, perfumeName, perfumeIntensity  in perfumes_array:
 	 	writer.writerow([perfumeBrand.encode('utf-8').strip(), perfumeName.encode('utf-8').strip(), perfumeIntensity.encode('utf-8').strip()])
 
-print("Done")
+print("CSV file with Dior Product Info generated")
